@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- 列表 -->
+  <view class="itemList">
+    <view wx:for="{{questionlist}}" class="swItem">
+      <image src="{{pic}}" mode="aspectFit" class='listImg1' wx:if="{{sug.url == '' || sug.url == null}}"></image> 
+      <image src="{{item.url}}" mode="aspectFit" class='listImg1' wx:else></image>
+      <view class="swContent">
+        <view class="swPrice">
+          <text class="swPR">{{item.askContact}}</text>
+          <text class="swTitle3">{{item.askTime}}</text>
+        </view>
+        <text class="swTitle1">{{item.askContent}}</text>
+        <text class="swTitle"><text class="official">官方回复：</text>{{item.replyContact}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='ask' bindtap='ask'>
+    <text>提问</text>
+  </view>
+</view>

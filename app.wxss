@@ -1,0 +1,15 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.fz-6{
+  font-size: 0.6rem;
+}
+.fc-a{
+  color: #aaa;
+}

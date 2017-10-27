@@ -1,0 +1,75 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset" class="from">
+    <!--姓名-->  
+    <view class="inputView">
+      <label class="loginLab">姓名</label>  
+      <input class="inputText" placeholder="开户人姓名" bindinput="nameinput" value='{{realName}}'/>  
+    </view>
+    <!--卡号-->  
+    <view class="inputView">
+      <label class="loginLab">卡号</label>  
+      <input class="inputText" placeholder="开户人卡号" bindinput="cardinput" type='number' maxlength='19' value='{{bankAccount}}'/>  
+    </view>
+    <!--银行-->  
+    <view class="inputView">
+      <label class="loginLab">银行</label>  
+      <input class="inputText" placeholder="银行全称" bindinput="bankinput" value='{{bankName}}'/>  
+    </view>
+    <!--开户地区-->  
+    <view class="inputView">
+      <label class="loginLab">开户地区</label>  
+      <text class="inputText" placeholder="开户地区" bindtap="open">{{province}} {{city}} {{county}}</text>  
+    </view>
+    <!--支行-->  
+    <view class="inputView">
+      <label class="loginLab">支行</label> 
+      <input class="inputText" placeholder="支行全称" bindinput="openbankinput" value='{{openBank}}'/>  
+    </view>
+
+    <!-- 身份证正面 -->
+    <view class='lisence'>
+      <image src='{{urlFront}}' class='lisenceImg' mode='aspectFit'></image>
+      <view class='lisenceCover'>
+        <view class='add' bindtap='add'>
+          <text>+</text>
+        </view>
+        <text class='lisenceTxt'>修改身份证正面</text>
+      </view>
+    </view>
+  
+    <!-- 身份证背面 -->
+    <view class='lisence'>
+      <image src='{{urlBack}}' class='lisenceImg' mode='aspectFit'></image>
+      <view class='lisenceCover'>
+        <view class='add' bindtap='add2'>
+          <text>+</text>
+        </view>
+        <text class='lisenceTxt'>修改身份证背面</text>
+      </view>
+    </view>
+    <!--按钮-->  
+    <view class="loginBtnView">  
+      <button class="saveBtn" type="primary" data-back='{{urlBack}}' data-front='{{urlFront}}' bindtap="save">保存</button>  
+    </view>
+  </form>  
+</view>  
+
+
+<!--地区选择-->
+<view class="cover" hidden="{{cover}}" bindtap="open" catchtouchmove="preventTouchMove"></view>
+<view wx:if="{{condition}}" class="citypicker">
+    <view class="cityheader">
+      <button bindtap="open">确定</button>
+    </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

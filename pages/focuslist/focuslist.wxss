@@ -1,0 +1,85 @@
+.swiper{
+  width: 100%;
+}
+.company{
+  margin: 10rpx;
+  padding: 10rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 5rpx;
+  background-color: #eee;
+}
+.comItem{
+  margin: 10rpx 0;
+  width: 4.7rem;
+  height: 110rpx;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.comImg{
+  width: 4.5rem;
+  height: 110rpx;
+}
+.itemList{
+  width: 730rpx;
+  padding: 10rpx; 
+}
+.swItem{
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.listImg{
+  display: inline-block;
+  position: relative;
+}
+.listImg1{
+  width: 150rpx;
+  height: 120rpx;
+}
+.mark1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40rpx;
+  height: 50rpx;
+}
+.swContent{
+  position: relative;
+  display: inline-block;
+  width: 76%;
+  padding-left: 3%;
+}
+.swTitle{
+  display: block;
+  line-height: 40rpx;
+}
+.swTitle1{
+  display: block;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 0.6rem;
+}
+.swPL{
+  display: inline-block;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+  color: red;
+}
+.swPR{
+  font-size: 0.6rem;
+}
+.swTitle3{
+  float: right;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+}
+.swPrice{
+  line-height: 40rpx;
+}
+.mark2{
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+  width: 40rpx;
+  height: 50rpx;
+}

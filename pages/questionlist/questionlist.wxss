@@ -1,0 +1,70 @@
+.itemList{
+  width: 100%;
+  padding: 5rpx; 
+}
+.swItem{
+  margin-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.listImg{
+  display: inline-block;
+  position: relative;
+}
+.listImg1{
+  margin-left: 10rpx;
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align:top;
+}
+.swContent{
+  position: relative;
+  display: inline-block;
+  width: 78%;
+  padding-left: 3%;
+}
+.swTitle{
+  display: block;
+  padding: 10rpx;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+  background-color: #eee;
+  border-radius: 8rpx;
+}
+.swTitle1{
+  display: block;
+  margin-bottom: 8rpx;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+}
+.swPR{
+  font-size: 0.8rem;
+  color:darkturquoise;
+}
+.swTitle3{
+  float: right;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.swPrice{
+  margin-bottom: 8rpx;
+  line-height: 40rpx;
+}
+.official{
+  color:dodgerblue;
+}
+.ask{
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 80rpx;
+  text-align: center;
+  background-color:deeppink;
+  box-shadow: 2rpx 3rpx 4rpx 4rpx rgba(200, 200, 200, 0.5);
+}

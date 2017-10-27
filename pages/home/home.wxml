@@ -1,0 +1,52 @@
+<view class="container">
+  <!--轮播图-->
+  <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffffff" autoplay="{{autoplay}}"style="height: {{imageheight-20}}px;">
+          <block wx:for-items="{{imgUrl}}">
+              <swiper-item>
+                  <image src="{{slide}}{{item.url}}" data-id='{{item.id}}' mode="widthFix" style="width: {{imagewidth}}px; height: {{imageheight}}px;" bindload="imageLoad"></image>
+              </swiper-item>
+          </block>
+      </swiper>
+  </view>
+  <!-- 过滤 -->
+  <view class='company'>
+    <block wx:for="{{comlist}}" wx:for-item='com'>
+      <view class='comItem' bindtap='tolist' data-id='{{com.companyId}}' data-title='{{com.companyName}}'>
+        <image src="{{slide}}{{com.companyUrl}}" mode="aspectFit" class='comImg'></image>
+        <text class='comName'>{{com.companyName}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 列表 -->
+  <view class='itemList'>
+    <block wx:for="{{joblist}}" wx:for-item='job'>
+      <view class="swItem" data-jobid='{{job.recruitId}}' data-title='{{job.title}}' bindtap='todetail'>
+        <view class='listImg'>
+          <image src="{{slide}}{{job.companyUrl}}" mode="aspectFit" class='listImg1'></image>
+          <image src="{{hot}}" mode="aspectFit"  hidden='{{job.rezhao == 0}}' class='mark1'></image>
+        </view>
+        <view class="swContent">
+          <text class="swTitle">{{job.title}}</text>
+          <text class="swTitle1"><text wx:for="{{job.companyLabel}}" wx:for-item="label">{{label}}</text></text>
+          <view class="swPrice">
+            <text class="swPR"><text class="swPL">{{job.minSalary}}-{{job.maxSalary}}</text>元</text>
+            <text class="swTitle3">已报名：{{job.enrollCount}}</text>
+          </view>
+          <image src="{{butie}}" mode="aspectFit" hidden='{{job.subsidy == 0}}' class='mark2'></image>
+        </view>
+      </view>
+    </block>
+    <!-- <view class="loading" hidden="{{!loading}}">
+      <image src="{{loadingImg}}" mode="aspectFit" class='loadimg'></image>
+      <text>载入更多...</text>
+    </view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>   -->
+  </view>
+
+
+    
+  <view class='ask' bindtap='suggest'>
+    <text>推好友领100</text>
+  </view>
+</view>

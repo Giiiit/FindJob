@@ -1,0 +1,57 @@
+page{
+    background-color: #f0f0f0;
+}
+.sugitem{
+  width: 730rpx;
+  padding: 10rpx 0 10rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.sugitem text{
+  float: left;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+.sugnum{
+  width: 80rpx;
+}
+.suglabel{
+  width: 120rpx;
+}
+.suglabel2{
+  width: 210rpx;
+}
+.sugitem>.money{
+  float: right;
+}
+.sugitem text{
+  margin-right: 20rpx;
+}
+.sugzoom{
+  position: fixed;
+  bottom: 0;
+  width: 710rpx;
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.sugtitle{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: deeppink;
+}
+
+.inputView {  
+  background-color: #fff;  
+  line-height: 100rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #cccccc;
+  vertical-align: top;
+}
+.ml-100 {
+  margin-left: 100rpx;
+}

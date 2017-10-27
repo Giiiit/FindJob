@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- 列表 -->
+  <view class='itemList'>
+    <block wx:for="{{focuslist}}" wx:for-item='focus'>
+      <view class="swItem" data-id='{{focus.recruitId}}' data-title='{{focus.title}}' bindtap='todetail'>
+        <view class='listImg'>
+          <image src="{{slide}}{{focus.companyUrl}}" mode="aspectFit" class='listImg1'></image>
+          <image src="{{hot}}" mode="aspectFit"  hidden='{{focus.rezhao == 0}}' class='mark1'></image>
+        </view>
+        <view class="swContent">
+          <text class="swTitle">{{focus.title}}</text>
+          <text class="swTitle1"><text wx:for="{{focus.companyLabel}}" wx:for-item="label">{{label}}</text></text>
+          <view class="swPrice">
+            <text class="swPR"><text class="swPL">{{focus.minSalary}}-{{focus.maxSalary}}</text>元</text>
+            <text class="swTitle3">已报名：{{focus.enrollCount}}</text>
+          </view>
+          <image src="{{butie}}" mode="aspectFit" hidden='{{focus.subsidy == 0}}' class='mark2'></image>
+        </view>
+      </view>
+    </block>
+    <!-- <view class="loading" hidden="{{!loading}}">
+      <image src="{{loadingImg}}" mode="aspectFit" class='loadimg'></image>
+      <text>载入更多...</text>
+    </view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>   -->
+  </view>
+</view>

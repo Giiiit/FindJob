@@ -1,0 +1,21 @@
+<view class="container">
+    <view class='sugitem'>
+      <text class='suglabel ml-100'>姓名</text>
+      <text class='suglabel2'>电话</text>
+      <text class='suglabel'>奖励</text>
+      <text class='money'>状态</text>
+    </view>
+   <block wx:for="{{suglist}}" wx:for-item="sug"> 
+    <view class='sugitem'>
+      <text class='sugnum'>{{index + 1}}</text>
+      <text class='suglabel'>{{sug.recommendName}}</text>
+      <text class='suglabel2'>{{sug.recommendMobile}}</text>
+      <text class='suglabel'>{{sug.recommendAmount}}</text>
+      <text class='money' wx:if="{{sug.status == '0'}}">待联系</text>
+      <text class='money' wx:elif="{{sug.status == '1'}}">待入职</text>
+      <text class='money' wx:elif="{{sug.status == '2'}}">已入职</text>
+      <text class='money' wx:elif="{{sug.status == '3'}}">入职待发放</text>
+      <text class='money' wx:else>入职已发放</text>
+    </view>
+   </block> 
+</view>

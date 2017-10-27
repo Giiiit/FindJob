@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/joblist/joblist",
+    "pages/questionlist/questionlist",
+    "pages/jobdetail/jobdetail",
+    "pages/login/login",
+    "pages/ask/ask",
+    "pages/my/my",
+    "pages/aboutus/aboutus",
+    "pages/focuslist/focuslist",
+    "pages/withdraw/withdraw",
+    "pages/suggest/suggest",
+    "pages/myaccount/myaccount",
+    "pages/mysuggest/mysuggest"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "找工作",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/indexSel.png",
+        "text": "找工作"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/mySel.png",
+        "text": "我的"
+      }
+    ],
+    "backgroundColor": "#fff",
+    "color": "#666666",
+    "selectedColor": "#1D82FF"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

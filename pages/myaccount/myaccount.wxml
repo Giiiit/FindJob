@@ -1,0 +1,39 @@
+<view class="container">
+  <text class='pocket'>当前余额：￥{{money}}</text>
+  <view class='btnblk'>
+      <button class="loginBtn" type="default" size='mini' bindtap="getMoney">立即提现</button>  
+      <button class="loginBtn" type="default" size='mini' bindtap="withdraw">提现资料</button>  
+  </view>
+    
+  <view class='sugitem'>
+    <text class='sugtitle'>提现记录</text>
+  </view>
+   <block wx:for="{{cashlist}}" wx:for-item="cash"> 
+    <view class='sugitem'>
+      <text class='sugnum'>{{index + 1}}</text>
+      <text class='suglabel'>{{cash.applyTime}}</text>
+      <text class='suglabel'>{{cash.withdrawAmount}}元</text>
+      <text class='money' wx:if="{{cash.status == '0'}}">提现中</text>
+      <text class='money' wx:if="{{cash.status == '1'}}">已提现</text>
+    </view>
+   </block> 
+
+  <!--提现弹窗-->
+  <view class="modal-mask" bindtap="hideModalA" catchtouchmove="preventTouchMoveA" wx:if="{{showModalA}}"></view>
+  <view class="modal-dialog" wx:if="{{showModalA}}">
+    <view class="modal-title">提现</view>
+    <view class="modal-content">
+  
+    <!--验证码-->  
+    <view class="inputView">
+      <label class="loginLab">提现金额：</label>  
+      <input class="inputText" type ="number" bindinput='cashinput' placeholder='{{money}}'/>  
+    </view> 
+      
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancelA" data-status="cancelA">取消</view>
+      <view class="btn-confirm" bindtap="onConfirmA" data-status="confirmA">提现</view>
+    </view>
+  </view>
+</view>

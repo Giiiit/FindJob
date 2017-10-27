@@ -1,0 +1,236 @@
+.swiper{
+  width: 100%;
+}
+.swContent{
+  display: inline-block;
+  width: 100%;
+}
+.swTitle{
+  display: block;
+  padding: 10rpx;
+  line-height: 30rpx;
+  font-size: 0.8rem;
+  background-color: #ddd;
+  border-radius: 8rpx 8rpx 0 0;
+}
+.swTitle1{
+  display: block;
+  margin-bottom: 8rpx;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+  text-align: right;
+}
+.swPR{
+  font-size: 0.8rem;
+}
+.swPL{
+  margin-left: 10rpx;
+  font-size: 0.8rem;
+  color: deepskyblue;
+}
+.swTitle3{
+  float: right;
+  line-height: 40rpx;
+  font-size: 0.6rem;
+  color:#aaa;
+}
+.swTitle4{
+  float: right;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+}
+.swPrice{
+  margin-bottom: 8rpx;
+  line-height: 40rpx;
+}
+.bubble{
+  margin-right: 10rpx;
+  padding: 5rpx 8rpx;
+  font-size: 0.6rem;
+  color: #fff;
+  background-color: deeppink;
+  border-radius: 10rpx;
+}
+.detail{
+  width: 96%;
+  padding: 0 2%;
+}
+.swContent2{
+  padding: 5rpx 10rpx;
+  border: 1rpx solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8rpx 8rpx;
+  font-size: 0.8rem;
+}
+.detail_item{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.detail_item:last-child{
+  margin-bottom: 120rpx;
+}
+.timeleft{
+  display: block;
+  color: deeppink;
+  line-height: 0.8rem;
+  text-align: right;
+}
+.bottom_btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10rpx 0;
+  border-top: 1rpx solid #ccc;
+  background-color: #fff;
+  text-align: center;
+}
+.bottom_btn button{
+  margin: 0 10rpx;
+}
+
+/* 模态框 */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 10rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  margin: 32rpx;
+  border:1rpx solid #ccc;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 1rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 0.8rem;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+
+.btn-cancelC {
+  width: 100%;
+  color: #666;
+  text-align: center;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #3CC51F;
+  text-align: center;
+}
+.btn-cancel, .btn-confirm, .btn-cancelC, .btn-cancel::after, .btn-confirm::after, .btn-cancelC::after{
+  border: none;
+  border-radius: 0
+}
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.inputView {  
+  background-color: #fff;  
+  line-height: 80rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #cccccc;
+  vertical-align: top;
+}
+.inputView:last-child {
+  border-bottom: none
+}   
+/*输入框*/  
+  
+.loginLab {  
+  margin: 0 10rpx;
+  float:left;
+  width: 100rpx;
+  color: #545454;  
+  font-size: 0.8rem;
+  line-height: 80rpx;
+}  
+.inputText {  
+  display: inline-block;
+  width: 210rpx;
+  text-align: left;
+  font-size: 0.8rem;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inputTextC {  
+  flex: block;  
+  display: inline-block;
+  padding: 0 10rpx;
+  text-align: left;
+  font-size: 0.8rem;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: blue;
+}  
+.inputView button[size="mini"].code{
+  float: right;
+  margin: 10rpx 10rpx 10rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 0.4rem;
+}
+.inputView .inputText2{
+  width: 300rpx;
+}
+.inputView .inputText3{
+  width: 140rpx;
+}

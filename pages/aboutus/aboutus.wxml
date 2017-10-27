@@ -1,0 +1,13 @@
+<!-- <import src ="../../wxParse/wxParse.wxml"/> -->
+<view class="container">
+  <view class='detail'>
+    <view class='detail_item'>
+      <view class='swContent2'>
+         <rich-text nodes="{{content}}"></rich-text> 
+        <!--<text space='emsp'>{{content}}</text> -->
+         <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}"/>  -->
+        
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class='container'>
+  <form bindsubmit='askSubmit'>
+    <textarea placeholder='说说你的疑问' auto-focus='true' class='askarea' bindinput='ask'></textarea>
+    <button type='primary' bindtap='toask' disabled="{{disabled}}">发布</button>
+  </form>
+</view>

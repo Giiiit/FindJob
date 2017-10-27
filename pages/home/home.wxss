@@ -1,0 +1,142 @@
+.container{padding:0}
+.swiper{
+  width: 100%;
+}
+.company{
+  margin: 10rpx;
+  width:730rpx;
+  padding: 5rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 5rpx;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+.comItem{
+  position: relative;
+  margin: 10rpx;
+  width: 160rpx;
+  height: 110rpx;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+}
+.comImg{
+  width: 100%;
+  height: 110rpx;
+}
+.comName{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 0.6rem;
+  background-color: rgba(100, 100, 100, 0.5)
+}
+.itemList{
+  width: 730rpx;
+  padding: 10rpx; 
+}
+.swItem{
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.listImg{
+  display: inline-block;
+  position: relative;
+}
+.listImg1{
+  width: 150rpx;
+  height: 120rpx;
+  border:1rpx solid #eee;
+  box-sizing:border-box;
+}
+.mark1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50rpx;
+  height: 50rpx;
+}
+.swContent{
+  position: relative;
+  display: inline-block;
+  width: 76%;
+  padding-left: 3%;
+}
+.swTitle{
+  display: block;
+  line-height: 40rpx;
+}
+.swTitle1{
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 0.6rem;
+}
+.swTitle1 text{
+  margin-right: 15rpx;
+  color: #666;
+}
+.swPL{
+  display: inline-block;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+  color: red;
+}
+.swPR{
+  font-size: 0.6rem;
+}
+.swTitle3{
+  float: right;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+}
+.swPrice{
+  line-height: 40rpx;
+}
+.mark2{
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+  width: 40rpx;
+  height: 50rpx;
+}
+.loading{  
+  padding: 10rpx;  
+  text-align: center;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;
+}  
+.loading.complete:before{  
+  display: none;  
+}  
+.ask{
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  width: 86rpx;
+  height: 50rpx;
+  padding: 18rpx 0;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  text-align: center;
+  background-color:deeppink;
+  box-shadow: 2rpx 3rpx 4rpx 4rpx rgba(200, 200, 200, 0.5);
+}
+.loadimg{
+  margin: 0 10rpx 0 0 ;
+  width: 0.8rem;
+  height: 0.8rem;
+}

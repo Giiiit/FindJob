@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- 列表 -->
+  <view class='itemList'>
+    <block wx:for="{{joblist}}">
+      <view class="swItem" data-id='{{item.recruitId}}' data-title='{{item.title}}' bindtap='todetail'>
+        <view class='listImg'>
+          <image src="{{slide}}{{item.companyUrl}}" mode="aspectFit" class='listImg1'></image>
+          <image src="{{hot}}" mode="aspectFit"  hidden='{{item.rezhao == 0}}' class='mark1'></image>
+        </view>
+        <view class="swContent">
+          <text class="swTitle">{{item.title}}</text>
+          <text class="swTitle1"><text wx:for="{{item.companyLabel}}" wx:for-item="label">{{label}}</text></text>
+          <view class="swPrice">
+            <text class="swPR"><text class="swPL">{{item.minSalary}}-{{item.maxSalary}}</text>元</text>
+            <text class="swTitle3">已报名：{{item.enrollCount}}</text>
+          </view>
+          <image src="{{butie}}" mode="aspectFit" hidden='{{item.subsidy == 0}}' class='mark2'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,129 @@
+<view class="container">
+  <!--轮播图-->
+  <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffffff" autoplay="{{autoplay}}"style="height: {{imageheight-20}}px;">
+          <block wx:for-items="{{imglist}}">
+              <swiper-item>
+                  <image src="{{slide}}{{item.url}}" mode="widthFix" style="width: {{imagewidth}}px; height: {{imageheight}}px;" bindload="imageLoad"></image>
+              </swiper-item>
+          </block>
+      </swiper>
+  </view>
+  <view class='detail'>
+    <view class="swContent">
+      <view class="swPrice">
+        <text class="swPR" data-title='{{title}}'>{{title}}</text>
+        <text class="swTitle3"><text class="swPL">{{minSalary}}-{{maxSalary}}</text>元</text>
+      </view>
+      <view class="swPrice">
+        <block wx:if="{{comlabelInfo != ''}}" wx:for="{{companyLabel}}"  wx:for-item='bubble'>
+          <text class="swPR bubble" >{{bubble}}</text>
+        </block>
+        <text class="swTitle4">已报名：{{enrollCount}}人</text>
+      </view>
+    </view>
+    <view class='detail_item'>
+      <text class="swTitle">补贴详情</text>
+      <view class='swContent2'>
+        <rich-text nodes="{{subsidyDescription}}"></rich-text>
+      </view>
+    </view>
+    <view class='detail_item'>
+      <text class="swTitle">薪资福利</text>
+      <view class='swContent2'>
+        <rich-text nodes="{{salaryDescription}}"></rich-text>
+      </view>
+    </view>
+    <view class='detail_item'>
+      <text class="swTitle">岗位要求</text>
+      <view class='swContent2'>
+        <rich-text nodes="{{positionDescription}}"></rich-text>
+      </view>
+    </view>
+    <view class='detail_item'>
+      <text class="swTitle">企业介绍</text>
+      <view class='swContent2'>
+        <rich-text nodes="{{information}}"></rich-text>
+      </view>
+    </view>
+    
+  </view>
+  <view class='bottom_btn'>
+    <button type='primary' size='mini'  bindtap="showDialogBtn" hidden='{{isEnroll == 1}}'>免费报名</button>
+    <button type='primary' size='mini'  bindtap="showDialogBtn" disabled='disabled' hidden='{{isEnroll != 1}}'>已报名</button>
+    <button type='default' size='mini' bindtap='focus' wx:if="{{attention == 0}}">关注</button>
+    <button type='default' size='mini' bindtap='unfocus' wx:else>取消关注</button>
+    <button type='default' size='mini' bindtap='answerlist'>提问</button>
+    <button type='default' size='mini' bindtap='myContractor'>我的经纪人</button>
+  </view>
+
+  <!--报名弹窗-->
+  <view class="modal-mask" bindtap="hideModalA" catchtouchmove="preventTouchMoveA" wx:if="{{showModalA}}"></view>
+  <view class="modal-dialog" wx:if="{{showModalA}}">
+    <view class="modal-title">报名信息确认</view>
+    <view class="modal-content">
+      <!--手机号-->  
+    <view class="inputView">
+      <label class="loginLab">新号码</label>  
+      <text class="inputText" data-phone='{{myphone}}'>{{myphone}}</text>
+      <button class='code' size='mini' bindtap="showDialogBtnB">修改</button>
+    </view>
+  
+    <!--验证码-->  
+    <view class="inputView">
+      <label class="loginLab">姓名</label>  
+      <text class="inputText">{{myname}}</text>
+    </view> 
+      
+    </view>
+    <view class="modal-footer">
+      <button class="btn-cancel" bindtap="onCancelA" data-status="cancelA">取消</button>
+      <button class="btn-confirm" bindtap="onConfirmA" data-status="confirmA">确定</button>
+    </view>
+  </view>
+
+  <!--更改弹窗-->
+  <view class="modal-mask" bindtap="hideModalB" catchtouchmove="preventTouchMoveB" wx:if="{{showModalB}}"></view>
+  <view class="modal-dialog" wx:if="{{showModalB}}">
+    <view class="modal-title">更改手机号码</view>
+    <view class="modal-content">
+      <!--手机号-->  
+    <view class="inputView">
+      <label class="loginLab">手机号</label>  
+      <input class="inputText inputText2" placeholder="请输入手机号" bindinput="phoneinput" type="number" maxlength="11" />  
+    </view>
+  
+    <!--验证码-->  
+    <view class="inputView">
+      <label class="loginLab">验证码</label>  
+      <input class="inputText inputText3" type ="number" placeholder="请输入验证码" bindinput="codeinput" maxlength="6"/>  
+      <button class='code' size='mini' bindtap="getCode" disabled="{{codeDis}}">{{phoneCode}}<text hidden="{{phoneCode == '获取验证码'}}">秒后重试</text></button>
+    </view> 
+      
+    </view>
+    <view class="modal-footer">
+      <button class="btn-cancel" bindtap="onCancelB" data-status="cancelB">取消</button>
+      <button class="btn-confirm" bindtap="onConfirmB" data-status="confirmB" disabled='{{btnB}}'>修改</button>
+    </view>
+  </view>
+
+  <!--经纪人弹窗-->
+  <view class="modal-mask" bindtap="hideModalC" catchtouchmove="preventTouchMoveC" wx:if="{{showModalC}}"></view>
+  <view class="modal-dialog" wx:if="{{showModalC}}">
+    <view class="modal-title">我的专属经纪人</view>
+    <view class="modal-content">
+      <!--经纪人-->  
+      <view class="inputView" data-eco='{{economicphone}}' bindtap='callEco'> 
+        <text class="inputTextC">经纪人{{economicname}}：{{economicphone}}</text>
+      </view>
+      <!--官方电话-->  
+      <view class="inputView" data-off='{{officialphone}}' bindtap='callOff'>
+        <text class="inputTextC">免费电话：{{officialphone}}</text>
+      </view>
+      
+    </view>
+    <view class="modal-footer">
+      <button class="btn-cancelC" bindtap="onCancelC" data-status="cancelC">取消</button>
+    </view>
+  </view>
+</view>

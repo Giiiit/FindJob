@@ -1,0 +1,14 @@
+form{
+  width: 96%;
+  padding: 0 2%;
+}
+.askarea{
+  width: 96%;
+  padding: 2%;
+  border: 1rpx solid #999;
+  border-radius: 8rpx;
+  font-size: 0.8rem;
+}
+button{
+  margin-top: 20rpx;
+}

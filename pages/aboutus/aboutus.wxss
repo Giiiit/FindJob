@@ -1,0 +1,15 @@
+@import "../../wxParse/wxParse.wxss";
+.detail{
+  width: 96%;
+  padding: 0 2%;
+}
+.swContent2{
+  padding: 10rpx;
+  border: 1rpx solid #eee;
+  border-radius: 8rpx;
+  font-size: 0.8rem;
+}
+.detail_item{
+  margin-top: 20rpx;
+  width: 100%;
+}

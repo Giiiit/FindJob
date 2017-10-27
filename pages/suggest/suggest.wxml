@@ -1,0 +1,32 @@
+<view class="container">
+  <block wx:for="{{suglist}}" wx:for-item="sug">
+    <view class='sugitem'>
+      <text>{{index + 1}}</text>
+        <image class="icon" src="{{pic}}" wx:if="{{sug.url == '' || sug.url == null}}" mode="aspectFit"></image> 
+        <image class="icon" src="{{sug.url}}" wx:else  mode="aspectFit"></image> 
+      <text>{{sug.contact}}</text>
+      <text class='money'>{{sug.amount}}元</text>
+    </view>
+  </block>
+
+  <view class='sugzoom'>
+    <text class='sugtitle'>推荐好友成功入职，即可领取100元</text>
+    <!--密码-->  
+    <view class="inputView">
+      <label class="loginLab">姓名</label>  
+      <input class="inputText" type ="text" placeholder="请输入姓名" bindinput="nameinput" maxlength="6"/>
+      <image class="contractor" src="../../images/sjgbtb2.png" mode="aspectFit"></image>
+    </view>  
+    <!--手机号-->  
+    <view class="inputView mb-20">
+      <label class="loginLab">手机号</label>  
+      <input class="inputText" placeholder="请输入手机号" bindinput="phoneinput" type="number" maxlength="11" />  
+    </view>
+  
+  
+    <!--按钮-->  
+    <view class="loginBtnView">  
+      <button class="loginBtn" type="primary" disabled="{{disabled}}" bindtap="suggest">推荐</button>  
+    </view>
+  </view>
+</view>
